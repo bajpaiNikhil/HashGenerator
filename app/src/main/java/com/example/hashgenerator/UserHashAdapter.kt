@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.snackbar.Snackbar
 
 class UserHashAdapter(val userHashList : ArrayList<userHash>): RecyclerView.Adapter<UserHashAdapter.ItemAdapter>() {
     class ItemAdapter(view : View) : RecyclerView.ViewHolder(view) {
@@ -35,6 +36,8 @@ class UserHashAdapter(val userHashList : ArrayList<userHash>): RecyclerView.Adap
             val clipboardManager = holder.itemView.context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
             val clipData = ClipData.newPlainText("Encrypted Text." , holder.CPhone.text)
             clipboardManager.setPrimaryClip(clipData)
+            val snackBar = Snackbar.make(holder.itemView, "item Copied" ,Snackbar.LENGTH_LONG)
+            snackBar.show()
         }
     }
 

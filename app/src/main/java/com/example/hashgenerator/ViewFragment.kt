@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -69,7 +70,6 @@ class ViewFragment : Fragment() {
                         userHashArrayList.add(user!!)
                         Log.d("view" , "array list is $userHashArrayList")
                         recyclerView.adapter = UserHashAdapter(userHashArrayList)
-
                     }
                 }
             }

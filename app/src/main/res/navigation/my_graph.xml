@@ -60,6 +60,6 @@
     <fragment
         android:id="@+id/viewFragment"
         android:name="com.example.hashgenerator.ViewFragment"
-        android:label="fragment_view"
+        android:label="View"
         tools:layout="@layout/fragment_view" />
 </navigation>
